@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RepairService – Theme Switcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style/style.css">
+  </head>
+  <body>
+    <button id="theme" onclick="toggleTheme()">☀️ / 🌙</button>
+<header>
+  <h1>RepairService</h1>
+  <p>Шиномонтаж 24/7 — выезд за 30 минут</p>
+  <button class="btn" onclick="scrollToSection('about')">О нас</button>
+</header>
+
+<section id="about">
+  <h2 class="section__title">О нас</h2>
+  <div class="about">
+    <img src="./image/3446.jpeg" alt="Бригада">
+    <img src="./image/diploma.webp" alt="Бригада">
+    <img src="./image/i.webp" alt="Бригада">
+    <div>
+      <p>Команда выездных шиномонтажников 24/7. 1 000+ довольных клиентов в этом году. Приезжаем за 30 минут, работаем на профессиональном оборудовании.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <h2 class="section__title">Услуги</h2>
+  <table>
+    <tr><th>Услуга</th><th>Цена</th></tr>
+    <tr><td>Снять/поставить колесо</td><td>400 ₽</td></tr>
+    <tr><td>Балансировка</td><td>200 ₽</td></tr>
+    <tr><td>Ремонт прокола</td><td>300 ₽</td></tr>
+  </table>
+</section>
+
+<section class="reviews">
+  <h2 class="section__title">Отзывы</h2>
+
+  <div class="carousel" id="carousel">
+    <!-- 7 отзывов -->
+    <div class="review">«Приехали за 15 минут» – Алексей</div>
+    <div class="review">«Цена как на сайте» – Дима</div>
+    <div class="review">«Спасили нас ночью» – Елена</div>
+    <div class="review">«Очень вежливые мастера» – Игорь</div>
+    <div class="review">«Работают быстро и качественно» – Мария</div>
+    <div class="review">«Рекомендую всем друзьям!» – Олег</div>
+    <div class="review">«Супер-сервис на дороге» – Татьяна</div>
+  </div>
+
+  <!-- Стрелки управления -->
+  <button class="arrow left" onclick="prev()">‹</button>
+  <button class="arrow right" onclick="next()">›</button>
+</section>
+
+<section class="form">
+  <h2 class="section__title">Заказать выезд</h2>
+  <form action="https://formspree.io/f/YOUR_ID" method="POST">
+    <input type="text" name="name" placeholder="Имя" required>
+    <input type="tel" name="phone" placeholder="Телефон" required>
+    <input type="text" name="address" placeholder="Адрес" required>
+    <select name="service">
+      <option value="remove">Снять/поставить</option>
+      <option value="balance">Балансировка</option>
+      <option value="repair">Ремонт</option>
+    </select>
+    <textarea name="comment" placeholder="Комментарий" rows="3"></textarea>
+    <button class="btn" type="submit">Отправить</button>
+  </form>
+</section>
+
+<footer>
+  <p>© RepairService 2024</p>
+  <p>
+    <a href="tel:+79991234567">+7 999 123-45-67</a> |
+    <a href="mailto:hello@repairservice.ru">hello@repairservice.ru</a> |
+    <a href="https://instagram.com/repairservice">Instagram</a>
+  </p>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/three@0.152.0/build/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
